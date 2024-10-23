@@ -29,8 +29,6 @@ jobs:
         uses: tree-sitter/setup-action/cli@v1
       - name: Run parser tests
         uses: tree-sitter/parser-test-action@v2
-        with:
-          test-rust: ${{runner.os == 'Linux'}}
       - name: Parse sample files
         uses: tree-sitter/parse-action@v4
         if: runner.os != 'Windows'
